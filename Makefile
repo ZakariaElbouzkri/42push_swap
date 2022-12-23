@@ -6,7 +6,7 @@
 #    By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 19:59:20 by zel-bouz          #+#    #+#              #
-#    Updated: 2022/12/23 20:06:41 by zel-bouz         ###   ########.fr        #
+#    Updated: 2022/12/23 20:29:24 by zel-bouz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ LIBFT_FILES = $(wildcard ./libft/*.c ./libft/*.h)
 all: $(NAME)
 
 $(NAME): $(LIBFT_FILES) $(OBJECT) $(HEADER) $(MAIN) $(FILES)
+			@echo "\n\033[33mStart Creating push_swap program...\033[0m\n"
 			@make -C $(LIBFT)
 			@ar -rcs $(LIB) $(OBJECT)
 			@gcc  $(FLAGS) $(MAIN) $(LIB) $(LIBFT_LIB) -o $(NAME)
@@ -60,10 +61,11 @@ $(NAME): $(LIBFT_FILES) $(OBJECT) $(HEADER) $(MAIN) $(FILES)
 bonus : $(B_NAME)
 
 $(B_NAME): $(LIBFT_FILES) $(OBJECT) $(B_OBJ) $(HEADER) $(B_MAIN) $(FILES) $(B_FILES)
+			@echo "\n\033[33mStart Creating checker program...\033[0m\n"
 			@make -C $(LIBFT)
 			@ar -rcs $(B_LIB) $(OBJECT) $(B_OBJ)
 			@gcc  $(FLAGS) $(B_MAIN) $(B_LIB) $(LIBFT_LIB) -o $(B_NAME)
-			@echo "\n\033[33m Checker program is created .\033[0m\n"
+			@echo "\n\033[35m checker program is created .\033[0m\n"
 
 %.o:%.c $(HEADER)
 			@gcc -c $< $(FLAGS) -o $@
@@ -71,7 +73,7 @@ $(B_NAME): $(LIBFT_FILES) $(OBJECT) $(B_OBJ) $(HEADER) $(B_MAIN) $(FILES) $(B_FI
 clean:
 			@make clean -C $(LIBFT)
 			@rm -rf srcs/*.o $(LIB)
-			@echo "\n\033[32mCleaning is Done!\033[0m\n"
+			@echo "\033[0;31mCleaning is Done!\033[0;31m"
 
 fclean: clean
 			@make fclean -C $(LIBFT)
