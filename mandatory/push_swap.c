@@ -6,13 +6,13 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:31:17 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 22:36:54 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/09 23:31:03 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void    init_vars(t_vars *vars)
+void	init_vars(t_vars *vars)
 {
 	vars->a = NULL;
 	vars->b = NULL;
@@ -46,8 +46,8 @@ void	push_swap(t_stk *a)
 {
 	t_vars	vars;
 
-    init_vars(&vars);
-    vars.a = a;
+	init_vars(&vars);
+	vars.a = a;
 	init_final_pos(vars.a);
 	sort_stack(&vars);
 	clear_stk(&vars.a);

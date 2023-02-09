@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:08:27 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/08 19:08:54 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/09 23:30:24 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,19 @@ void	free_args(char **arr)
 	while (arr[i])
 		free(arr[i++]);
 	free(arr);
+}
+
+static void	free_alocated(char **res, int i)
+{
+	int	j;
+
+	j = 0;
+	while (j < i)
+	{
+		free(res[i++]);
+	}
+	free(res);
+	res = NULL;
 }
 
 static int	count_words(char const *s, char c)
@@ -73,6 +86,8 @@ char	**split_args(char **arr)
 		return (NULL);
 	while (arr[i])
 	{
+		if (!ft_strcmp(arr[i], ""))
+			return (free_alocated(res, i), NULL);
 		spl = ft_split(arr[i], ' ');
 		if (!spl)
 			return (NULL);

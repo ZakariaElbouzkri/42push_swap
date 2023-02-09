@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:10:38 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 20:51:45 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/09 23:34:06 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,22 @@ int	check_dup(char **av)
 
 int	str_is_digit(char *s)
 {
-	int	triger;
+	int	plus;
+	int	minus;
 
-	triger = 1;
-	if (!ft_strcmp(s, "-"))
+	plus = 1;
+	minus = 1;
+	if (!ft_strcmp(s, "-") || !ft_strcmp(s, "-"))
 		return (0);
 	while (*s)
 	{
 		if (!ft_isdigit(*s))
 		{
-			if (*s == '-' && triger != 0)
-				triger = 0;
-			else
+			if (*s == '+' && plus != 0)
+				plus = 0;
+			if (*s == '-' && minus != 0)
+				minus = 0;
+			else if ((*s == '+' && !plus) || (*s == '-' && !minus))
 				return (0);
 		}
 		s++;

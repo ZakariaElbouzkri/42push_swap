@@ -2,6 +2,11 @@ NAME = push_swap
 BNAME = checker
 LIBFT = libft.a
 UTILS = utils.a
+HEADERS = includes/checker.h \
+	includes/libft.h \
+	includes/parser.h \
+	includes/push_swap.h \
+	includes/stack.h 
 
 
 CC = cc -Wall -Wextra -Werror
@@ -45,19 +50,21 @@ $(LIBFT) :
 	cd libft/ && make
 
 $(NAME) : $(PARSER_OBJ) $(STK_OBJ) $(MAN_OBJ) $(B_OBJ) $(LIBFT) $(MAIN)
-	cc $^ -o $@
+	@cc $^ -o $@
+	@echo "$(NAME) programe created"
 
-%.o: %.c
+%.o: %.c $(HEADERS)
 	$(CC) -o $@ -c  $<
 
 bonus : all
 	$(CP) $(NAME) $(BNAME)
 
-clean : $(PARSER_OBJ) $(STK_OBJ) $(MAN_OBJ) $(B_OBJ)
-	cd libft/ && make fclean
-	$(RM) $^
+clean :
+	cd libft/ && make clean
+	@$(RM) $(PARSER_OBJ) $(STK_OBJ) $(MAN_OBJ) $(B_OBJ)
 
 fclean : clean
+	cd libft/ && make fclean
 	$(RM) $(NAME) $(BNAME)
 
 re : fclean all
