@@ -6,14 +6,14 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 04:51:57 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/12/18 01:46:20 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:45:17 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-void    ft_puterror(char *err)
+void	ft_puterror(char *err)
 {
-    ft_putstr_fd(err, 2);
-    exit(1);
+	ft_putstr_fd(err, 2);
+	exit(1);
 }

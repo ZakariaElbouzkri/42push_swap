@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:18:26 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/10/30 22:18:28 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:46:06 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {

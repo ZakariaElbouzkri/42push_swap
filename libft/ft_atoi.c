@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:06:40 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/12/20 02:57:20 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:44:40 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	ft_is_space(char c)
 {

@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 15:38:03 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 19:53:45 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:45:48 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

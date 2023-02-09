@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 00:54:20 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 19:54:02 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:46:03 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

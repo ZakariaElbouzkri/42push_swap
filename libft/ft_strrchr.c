@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 02:24:41 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 19:54:07 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:46:14 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:05:51 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 02:41:08 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:44:42 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

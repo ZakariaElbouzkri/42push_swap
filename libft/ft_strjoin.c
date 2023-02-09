@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:02:03 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/22 06:09:56 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:45:53 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {

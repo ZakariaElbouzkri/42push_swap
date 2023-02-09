@@ -6,9 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:09:04 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 02:41:36 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:44:54 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/libft.h"
 
 int	ft_isprint(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:54:35 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/22 06:14:33 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:45:22 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_puthexa(unsigned long n, char c)
 {

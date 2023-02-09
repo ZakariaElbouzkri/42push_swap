@@ -6,9 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:11:15 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 02:41:33 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:44:51 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/libft.h"
 
 int	ft_isdigit(int c)
 {

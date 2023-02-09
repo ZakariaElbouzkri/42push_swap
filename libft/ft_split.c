@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:02:14 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 19:53:38 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:44:05 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	count_words(char const *s, char c)
 {

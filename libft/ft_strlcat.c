@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 02:28:51 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 19:53:55 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:45:56 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

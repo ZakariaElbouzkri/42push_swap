@@ -1,82 +1,64 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/23 19:59:20 by zel-bouz          #+#    #+#              #
-#    Updated: 2022/12/23 20:29:24 by zel-bouz         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = push_swap
-
-B_NAME = checker
-
-LIB = pushswap.a
-
-B_LIB = checker.a
-
-MAIN = ./srcs/push_swap.c
-
-B_MAIN  = ./srcs/checker.c
-
-LIBFT = ./libft
-
-LIBFT_LIB = $(LIBFT)/libft.a
-
-FLAGS = -Wextra -Werror -Wall
-
-FILES = ./srcs/ft_splite_args.c \
-	./srcs/init.c \
-	./srcs/linked_list_op.c \
-	./srcs/ps_op.c \
-	./srcs/sort_big.c \
-	./srcs/sort_small.c \
-	./srcs/sort_stack.c \
-	./srcs/sort_utils.c \
-	./srcs/stack_checks.c
-
-B_FILES = ./srcs/ps_checker_op.c 
-
-HEADER = ./includes/push_swap.h
-
-OBJECT = $(FILES:.c=.o)
-
-B_OBJ = $(B_FILES:.c=.o)
+BNAME = checker
+LIBFT = libft.a
+UTILS = utils.a
 
 
-LIBFT_FILES = $(wildcard ./libft/*.c ./libft/*.h)
+CC = cc -Wall -Wextra -Werror
+AR = ar rc
+RM = rm -f
+CP = cp 
 
-all: $(NAME)
+STK_FILES = stack/exec_op.c \
+	stack/exec_op2.c \
+	stack/operations.c \
+	stack/operations2.c \
+	stack/utils.c \
+	stack/utils2.c \
+	stack/utils3.c 
 
-$(NAME): $(LIBFT_FILES) $(OBJECT) $(HEADER) $(MAIN) $(FILES)
-			@echo "\n\033[33mStart Creating push_swap program...\033[0m\n"
-			@make -C $(LIBFT)
-			@ar -rcs $(LIB) $(OBJECT)
-			@gcc  $(FLAGS) $(MAIN) $(LIB) $(LIBFT_LIB) -o $(NAME)
-			@echo "\n\033[35m Push_swap program is created .\033[0m\n"
-					
-bonus : $(B_NAME)
+PARSER = parser/args_to_stk.c \
+	parser/parse_utils.c \
+	parser/parser.c \
+	parser/split_arg.c 
 
-$(B_NAME): $(LIBFT_FILES) $(OBJECT) $(B_OBJ) $(HEADER) $(B_MAIN) $(FILES) $(B_FILES)
-			@echo "\n\033[33mStart Creating checker program...\033[0m\n"
-			@make -C $(LIBFT)
-			@ar -rcs $(B_LIB) $(OBJECT) $(B_OBJ)
-			@gcc  $(FLAGS) $(B_MAIN) $(B_LIB) $(LIBFT_LIB) -o $(B_NAME)
-			@echo "\n\033[35m checker program is created .\033[0m\n"
+MANDATORY = mandatory/push_swap.c \
+	mandatory/sort_big.c \
+	mandatory/sort_small.c \
+	mandatory/sort_stack.c \
+	mandatory/sort_utils.c \
+	mandatory/utils.c
 
-%.o:%.c $(HEADER)
-			@gcc -c $< $(FLAGS) -o $@
+BONUS = bonus/checker.c \
+	bonus/execute_op.c
 
-clean:
-			@make clean -C $(LIBFT)
-			@rm -rf srcs/*.o $(LIB)
-			@echo "\033[0;31mCleaning is Done!\033[0;31m"
+MAIN = main.c
 
-fclean: clean
-			@make fclean -C $(LIBFT)
-			@rm -rf $(NAME) $(LIB) $(B_NAME) $(B_LIB)
+PARSER_OBJ = $(PARSER:.c=.o)
+STK_OBJ = $(STK_FILES:.c=.o)
+MAN_OBJ = $(MANDATORY:.c=.o)
+B_OBJ = $(BONUS:.c=.o)
+
+all : $(LIBFT) $(NAME)
+
+$(LIBFT) :
+	cd libft/ && make
+
+$(NAME) : $(PARSER_OBJ) $(STK_OBJ) $(MAN_OBJ) $(B_OBJ) $(LIBFT) $(MAIN)
+	cc $^ -o $@
+
+%.o: %.c
+	$(CC) -o $@ -c  $<
+
+bonus : all
+	$(CP) $(NAME) $(BNAME)
+
+clean : $(PARSER_OBJ) $(STK_OBJ) $(MAN_OBJ) $(B_OBJ)
+	cd libft/ && make fclean
+	$(RM) $^
+
+fclean : clean
+	$(RM) $(NAME) $(BNAME)
 
 re : fclean all
+	

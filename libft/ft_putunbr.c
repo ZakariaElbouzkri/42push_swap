@@ -6,12 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 17:33:24 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/22 06:15:19 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:45:37 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
+#include "../includes/libft.h"
 
 int	ft_putunbr(unsigned int n)
 {

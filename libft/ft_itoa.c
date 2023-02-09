@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 00:10:51 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 02:41:40 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:44:55 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	nbr_len(int a)
 {

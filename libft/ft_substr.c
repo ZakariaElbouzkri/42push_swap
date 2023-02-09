@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 03:54:04 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 19:54:17 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:46:18 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -38,4 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_str[i] = '\0';
 	return (sub_str);
 }
-

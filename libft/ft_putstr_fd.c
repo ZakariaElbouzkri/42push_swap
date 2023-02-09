@@ -6,11 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 01:41:51 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 19:53:35 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:45:30 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
