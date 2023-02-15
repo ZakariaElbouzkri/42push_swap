@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:52:06 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 20:56:50 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/14 05:49:03 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_vars
 	int		b_len;
 	int		fixe_len;
 	int		shunks_nm;
+	int		pv;
 }	t_vars;
 
 void	push_swap(t_stk *a);
@@ -45,6 +46,7 @@ void	rotate_b(t_vars *vars);
 int		closest_nbr_of_chunk(t_vars *vars);
 
 // utils:
+void	rotate_b(t_vars *vars);
 
 int		calc_moves(int pos1, int pos2, int len);
 void	push_min(t_vars *vars);
@@ -61,5 +63,8 @@ void	init_final_pos(t_stk *stk);
 // ******
 
 void	print_list(t_stk *stk);
+
+// 
+void    chunk_algo2(t_vars *vars);
 
 #endif

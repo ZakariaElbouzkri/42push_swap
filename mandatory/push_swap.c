@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:31:17 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 23:31:03 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/14 06:29:22 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,6 @@ void	init_vars(t_vars *vars)
 	vars->pivot = 0;
 	vars->shunks_nm = 0;
 	vars->fixe_len = 0;
-}
-
-void	print_list(t_stk *stk)
-{
-	int	i;
-
-	i = 0;
-	while (stk)
-	{
-		ft_printf("value : %d\t| final pos : %d\t| pos : %d\n",
-			stk->data, stk->rank, stk->pos);
-		stk = stk->next;
-		i++;
-	}
 }
 
 void	push_swap(t_stk *a)

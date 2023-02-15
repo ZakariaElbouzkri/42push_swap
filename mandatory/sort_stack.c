@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:36:35 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 23:30:42 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/14 07:44:49 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int	get_nbr_chunks(int len)
 {
 	if (len < 40)
 		return (len / 2);
-	else if (len < 500)
+	else if (len < 499)
 		return (len / 20);
 	else
-		return (len / 40);
+		return (len / 55);
 }
 
 void	fill_vars(t_vars *vars)
@@ -31,8 +31,6 @@ void	fill_vars(t_vars *vars)
 	vars->a_max = max_element(vars->a);
 	vars->b_max = max_element(vars->b);
 	vars->fixe_len = vars->a_len;
-	vars->shunks_nm = get_nbr_chunks(vars->a_len);
-	vars->pivot = vars->a_len / vars->shunks_nm;
 }
 
 void	sort_stack(t_vars *vars)
@@ -43,6 +41,10 @@ void	sort_stack(t_vars *vars)
 		if (vars->a_len <= 5)
 			sort_small(vars);
 		else
+		{
+			vars->shunks_nm = get_nbr_chunks(vars->a_len);
+			vars->pivot = vars->a_len / vars->shunks_nm;
 			chunk_algo(vars);
+		}
 	}
 }

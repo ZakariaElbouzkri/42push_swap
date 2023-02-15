@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:40:26 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 21:43:20 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/14 07:32:37 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,27 @@ void	push_max(t_stk **a, t_stk **b, int len)
 	exec_pa(b, a);
 }
 
+t_stk	*node_by_pos(t_stk *stk, int pos)
+{
+	while (stk)
+	{
+		if (stk->pos == pos)
+			return (stk);
+		stk = stk->next;
+	}
+	return (NULL);
+}
+
 void	push_closest_nbr(t_vars *vars, int pos)
 {
 	int	i;
+	t_stk	*node;
 
 	i = 0;
+	node = node_by_pos(vars->a, pos);
 	if (pos > vars->a_len / 2)
 	{
-		while (i < vars->a_len - pos)
+		while (vars->a->data != node->data)
 		{
 			exec_rra(&vars->a);
 			i++;
@@ -83,7 +96,7 @@ void	push_closest_nbr(t_vars *vars, int pos)
 	}
 	if (pos <= vars->a_len / 2)
 	{
-		while (i < pos)
+		while (vars->a->data != node->data)
 		{
 			exec_ra(&vars->a);
 			i++;

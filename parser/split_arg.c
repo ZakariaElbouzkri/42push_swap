@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:08:27 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 23:30:24 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 02:51:18 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ static void	free_alocated(char **res, int i)
 	int	j;
 
 	j = 0;
-	while (j < i)
+	while (j < (i - 1))
 	{
-		free(res[i++]);
+		free(res[i]);
+		res[i++] = NULL;
 	}
 	free(res);
 	res = NULL;

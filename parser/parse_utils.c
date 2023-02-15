@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:10:38 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 23:34:06 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 02:47:05 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	str_is_digit(char *s)
 
 	plus = 1;
 	minus = 1;
-	if (!ft_strcmp(s, "-") || !ft_strcmp(s, "-"))
+	if (!ft_strcmp(s, "-") || !ft_strcmp(s, "+"))
 		return (0);
 	while (*s)
 	{
@@ -47,7 +47,7 @@ int	str_is_digit(char *s)
 		{
 			if (*s == '+' && plus != 0)
 				plus = 0;
-			if (*s == '-' && minus != 0)
+			else if (*s == '-' && minus != 0)
 				minus = 0;
 			else if ((*s == '+' && !plus) || (*s == '-' && !minus))
 				return (0);
