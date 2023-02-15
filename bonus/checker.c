@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:28:29 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/14 03:39:59 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 03:09:09 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,10 @@ void	checker(t_stk *a)
 		op = NULL;
 		op = get_next_line(0);
 	}
-	if (stack_sorted(a) && a_len == stk_size(a))
-	{
-		clear_stk(&a);
+	if (a && stack_sorted(a) && stk_size(a) == a_len)
 		ft_printf("OK\n");
-	}
 	else
-	{
-		if (b)
-			clear_stk(&b);
-		if (a)
-			clear_stk(&a);
 		ft_printf("KO\n");
-	}
+	clear_stk(&a);
+	clear_stk(&b);
 }

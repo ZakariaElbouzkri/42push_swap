@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:46:22 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 20:58:28 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 03:00:37 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ void	del_last(t_stk **stk);
 void	del_first(t_stk	**stk);
 void	clear_stk(t_stk **stk);
 void	renew_indx(t_stk *a);
+void	print_list(t_stk *stk);
 
 #endif

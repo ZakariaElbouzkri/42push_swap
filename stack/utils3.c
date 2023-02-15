@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 20:28:08 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 02:34:22 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 03:01:39 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,15 @@ int	stack_sorted(t_stk *a)
 	int	triger;
 
 	triger = 1;
-
 	while (a->next)
 	{
-		i = a->rank;
-		j = a->next->rank;
+		i = a->data;
+		j = a->next->data;
 		if (i > j)
-			return (0);
+			triger = 0;
 		a = a->next;
 	}
-	return (1);
+	return (triger);
 }
 
 void	print_list(t_stk *stk)
