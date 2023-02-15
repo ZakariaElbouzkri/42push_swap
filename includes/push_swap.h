@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:52:06 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/14 05:49:03 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 03:24:30 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,8 @@ int		closest_nbr_of_chunk(t_vars *vars);
 
 // utils:
 void	rotate_b(t_vars *vars);
-
 int		calc_moves(int pos1, int pos2, int len);
 void	push_min(t_vars *vars);
-void	push_max(t_stk **a, t_stk **b, int len);
 void	push_closest_nbr(t_vars *vars, int pos);
 int		max_element(t_stk *a);
 int		min_element(t_stk *a);
@@ -59,12 +57,10 @@ t_stk	*min_elem_node(t_stk *stk);
 t_stk	*uninitialized_max(t_stk *stk);
 void	fill_vars(t_vars *vars);
 void	init_final_pos(t_stk *stk);
-
-// ******
-
 void	print_list(t_stk *stk);
-
-// 
-void    chunk_algo2(t_vars *vars);
+void	push_max_to_b(t_vars *vars);
+void	push_elem(t_vars *vars, t_stk *node, int size);
+void	push_max_to_b(t_vars *vars);
+t_stk	*under_max_node(t_stk *stk, t_stk *mx);
 
 #endif

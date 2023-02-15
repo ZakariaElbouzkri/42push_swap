@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:40:26 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/14 07:32:37 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 03:23:34 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,24 +50,6 @@ void	push_min(t_vars *vars)
 	vars->a_len--;
 }
 
-void	push_max(t_stk **a, t_stk **b, int len)
-{
-	t_stk	*max;
-
-	max = max_elem_node(*b);
-	if (max->pos <= len / 2)
-	{
-		while ((*b)->rank != max->rank)
-			exec_rb(b);
-	}
-	else
-	{
-		while ((*b)->rank != max->rank)
-			exec_rrb(b);
-	}
-	exec_pa(b, a);
-}
-
 t_stk	*node_by_pos(t_stk *stk, int pos)
 {
 	while (stk)
@@ -81,7 +63,7 @@ t_stk	*node_by_pos(t_stk *stk, int pos)
 
 void	push_closest_nbr(t_vars *vars, int pos)
 {
-	int	i;
+	int		i;
 	t_stk	*node;
 
 	i = 0;

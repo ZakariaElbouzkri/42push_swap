@@ -11,7 +11,7 @@ PARSER = parser/args_to_stk.c parser/parse_utils.c \
 	parser/parser.c parser/split_arg.c 
 
 MANDATORY = mandatory/push_swap.c mandatory/sort_big.c mandatory/sort_small.c \
-	mandatory/sort_stack.c mandatory/sort_utils.c mandatory/utils.c mandatory/chunks.c
+	mandatory/sort_stack.c mandatory/sort_utils.c mandatory/utils.c mandatory/sort_utils2.c
 
 LIB_FILES = libft/ft_atoi.c libft/ft_atoi_long.c libft/ft_bzero.c libft/ft_calloc.c libft/ft_isalnum.c libft/ft_isalpha.c libft/ft_isascii.c libft/ft_isdigit.c \
 	libft/ft_isprint.c libft/ft_itoa.c libft/ft_memchr.c libft/ft_memcmp.c libft/ft_memcpy.c libft/ft_memmove.c libft/ft_memset.c libft/ft_printf.c libft/ft_putchar.c  \
