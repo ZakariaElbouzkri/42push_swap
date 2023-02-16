@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:28:29 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 03:09:09 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/16 04:42:35 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,17 @@ void	checker(t_stk *a)
 		ft_printf("KO\n");
 	clear_stk(&a);
 	clear_stk(&b);
+}
+
+int main(int ac, char **av)
+{
+	t_stk	*stk;
+
+	if (ac >= 2)
+	{
+		stk = parse_stack(&av[1]);
+		if (!stk)
+			ft_puterror("ERROR\n");		
+	}
+	return (0);
 }

@@ -2,7 +2,16 @@ HEADERS = includes/checker.h \
 	includes/libft.h \
 	includes/parser.h \
 	includes/push_swap.h \
-	includes/stack.h 
+	includes/stack.h
+
+# COLORS:
+CYAN = \033[0;36m
+BLUE = \033[0;34m
+PURPLE = \033[0;35m
+YELLOW = \033[0;33m
+GREEN = \033[0;32m
+RED = \033[0;31m
+
 
 STK_FILES = stack/exec_op.c stack/exec_op2.c stack/operations.c \
 	stack/operations2.c stack/utils.c stack/utils2.c stack/utils3.c 
@@ -10,7 +19,7 @@ STK_FILES = stack/exec_op.c stack/exec_op2.c stack/operations.c \
 PARSER = parser/args_to_stk.c parser/parse_utils.c \
 	parser/parser.c parser/split_arg.c 
 
-MANDATORY = mandatory/push_swap.c mandatory/sort_big.c mandatory/sort_small.c \
+MANDATORY = mandatory/sort_big.c mandatory/sort_small.c \
 	mandatory/sort_stack.c mandatory/sort_utils.c mandatory/utils.c mandatory/sort_utils2.c
 
 LIB_FILES = libft/ft_atoi.c libft/ft_atoi_long.c libft/ft_bzero.c libft/ft_calloc.c libft/ft_isalnum.c libft/ft_isalpha.c libft/ft_isascii.c libft/ft_isdigit.c \
@@ -23,13 +32,7 @@ LIB_FILES = libft/ft_atoi.c libft/ft_atoi_long.c libft/ft_bzero.c libft/ft_callo
 BONUS = bonus/checker.c \
 	bonus/execute_op.c
 
-# COLORS:
-CYAN = \033[0;36m
-BLUE = \033[0;34m
-PURPLE = \033[0;35m
-YELLOW = \033[0;33m
-GREEN = \033[0;32m
-RED = \033[0;31m
+
 
 
 PARSER_OBJ = $(PARSER:.c=.o)
@@ -38,7 +41,7 @@ MAN_OBJ = $(MANDATORY:.c=.o)
 B_OBJ = $(BONUS:.c=.o)
 LIB_OBJ = $(LIB_FILES:.c=.o)
 
-MAIN = main.c
+MAIN = mandatory/push_swap.c
 
 NAME = push_swap
 

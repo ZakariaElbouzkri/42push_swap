@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:31:17 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/14 06:29:22 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/16 04:42:52 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,18 @@ void	push_swap(t_stk *a)
 	init_final_pos(vars.a);
 	sort_stack(&vars);
 	clear_stk(&vars.a);
+}
+
+int	main(int ac, char **av)
+{
+	t_stk	*stk;
+
+	if (ac >= 2)
+	{
+		stk = parse_stack(&av[1]);
+		if (!stk)
+			ft_puterror("ERROR\n");
+		push_swap(stk);
+	}
+	return (0);
 }

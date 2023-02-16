@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:37:56 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 23:36:11 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/16 04:46:06 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include "libft.h"
 # include "stack.h"
-# include "push_swap.h"
-# include "checker.h"
 
 t_stk	*parse_stack(char **av);
 char	**split_args(char **arr);

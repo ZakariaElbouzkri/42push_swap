@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 03:21:48 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 03:24:53 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/16 04:32:18 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,3 +68,4 @@ void	push_max_to_b(t_vars *vars)
 		push_elem(vars, ud_mx, vars->b_len);
 	fix_un_mx_pos(vars);
 }
+

@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:52:06 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 03:34:24 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/16 04:34:56 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "libft.h"
 # include "stack.h"
+# include "parser.h"
+
 
 typedef struct s_vars
 {
@@ -29,7 +31,6 @@ typedef struct s_vars
 	int		b_len;
 	int		fixe_len;
 	int		shunks_nm;
-	int		pv;
 }	t_vars;
 
 void	push_swap(t_stk *a);

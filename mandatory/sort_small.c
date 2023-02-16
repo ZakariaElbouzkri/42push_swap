@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:38:34 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/09 21:38:38 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 03:47:24 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	sort_small(t_vars *vars)
 	if (!stack_sorted(vars->a))
 	{
 		if (vars->a_len == 2)
-			_sa_(vars->a);
+			exec_sa(vars->a);
 		else if (vars->a_len == 3)
 			sort_three(vars);
 		else if (vars->a_len <= 5)

@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:36:35 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 03:27:22 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 23:24:56 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	get_nbr_chunks(int len)
 	else if (len < 499)
 		return (len / 20);
 	else
-		return (len / 45);
+		return (len / 55);
 }
 
 void	fill_vars(t_vars *vars)

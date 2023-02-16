@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:38:58 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 03:25:18 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/15 11:19:59 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_stk	*under_max_node(t_stk *stk, t_stk *mx)
 {
 	while (stk)
 	{
-		if (stk->data == mx->data - 1)
+		if (stk->rank == mx->rank - 1)
 			return (stk);
 		stk = stk->next;
 	}
