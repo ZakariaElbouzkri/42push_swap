@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 05:01:46 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/17 11:11:45 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/17 11:30:58 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ void	push_to_stack(t_utils *vr)
 		if (vr->size_b > 0)
 		{
 			_pa_(&vr->b, &vr->a);
-			vr->size_b++;
+			vr->size_b--;
+			vr->size_a++;
 		}
 	}
 	else if (!ft_strcmp(vr->op, "pb\n"))
@@ -76,6 +77,7 @@ void	push_to_stack(t_utils *vr)
 		{
 			_pa_(&vr->a, &vr->b);
 			vr->size_a--;
+			vr->size_b++;
 		}
 	}
 }
