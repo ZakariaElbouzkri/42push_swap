@@ -6,13 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:28:29 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/17 01:30:58 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/17 11:56:59 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/checker.h"
-
-
 
 int	main(int ac, char **av)
 {

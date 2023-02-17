@@ -21,9 +21,10 @@ LIBFT_FILES = libft/ft_atoi.c libft/ft_atoi_long.c libft/ft_bzero.c libft/ft_cal
 	libft/ft_strmapi.c libft/ft_strncmp.c libft/ft_strndup.c libft/ft_strnstr.c libft/ft_strrchr.c libft/ft_strtrim.c libft/ft_substr.c libft/ft_swap.c \
 	libft/ft_tolower.c libft/ft_toupper.c libft/get_next_line.c
 
-CHECKER_FILES = bonus/checker.c bonus/execute_op.c
+CHECKER_FILES = bonus/checker.c bonus/exec_inst.c bonus/utils.c
 
-PS_FILES = mandatory/push_swap.c mandatory/sort_big.c mandatory/sort_small.c mandatory/sort_stack.c mandatory/sort_utils.c mandatory/sort_utils2.c mandatory/utils.c
+PS_FILES = mandatory/push_swap.c mandatory/sort_big.c mandatory/sort_small.c mandatory/sort_stack.c \
+mandatory/sort_utils.c mandatory/sort_utils2.c mandatory/utils.c
 
 PS_OBJ = $(PS_FILES:.c=.o)
 CHECKER_OBJ = $(CHECKER_FILES:.c=.o)
@@ -46,24 +47,29 @@ PS_LIB = utils.a
 all : $(PS_LIB) $(NAME)
 
 $(PS_LIB) : $(LIBFT_OBJ) $(STACK_OBJ) $(PARSE_OBJ)
-	${AR} $@ $^
+	@${AR} $@ $^
+	@echo "${PURPLE} utils.a Created"
 
 $(NAME) : $(PS_LIB) $(PS_OBJ)
-	${CC} $^ mandatory/main.c -o $@
+	@${CC} $^ mandatory/main.c -o $@
+	@echo "${CYAN} \"push_swap\" ${GREEN}programe created"
 
 %.o : %.c $(HEADERS)
-	$(CC) -o $@ -c  $<
+	@$(CC) -c $< -o $@
 
 bonus : $(CNAME)
 
 $(CNAME) : $(PS_LIB) $(CHECKER_OBJ)
-	${CC} $^ bonus/main.c -o $@
+	@${CC} $^ bonus/main.c -o $@
+	@echo "${CYAN} \"checker\" ${GREEN} programe created"
 
 clean : 
-	${RM} $(PS_OBJ) $(CHECKER_OBJ) $(LIBFT_OBJ) $(STACK_OBJ) $(PARSE_OBJ)
+	@${RM} $(PS_OBJ) $(CHECKER_OBJ) $(LIBFT_OBJ) $(STACK_OBJ) $(PARSE_OBJ)
+	@echo "${RED} Objects file removed"
 
 fclean : clean
-	$(RM) $(PS_LIB) $(NAME) $(CNAME)
+	@$(RM) $(PS_LIB) $(NAME) $(CNAME)
+	@echo "${RED} all created file created"
 
 re : fclean all
 
