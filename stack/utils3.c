@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 20:28:08 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 03:01:39 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/17 11:02:30 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	print_list(t_stk *stk)
 	int	i;
 
 	i = 0;
+	if (!stk)
+		return ;
 	while (stk)
 	{
 		ft_printf("value : %d\t| final pos : %d\t| pos : %d\n",

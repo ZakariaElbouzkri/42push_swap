@@ -23,7 +23,7 @@ LIBFT_FILES = libft/ft_atoi.c libft/ft_atoi_long.c libft/ft_bzero.c libft/ft_cal
 
 CHECKER_FILES = bonus/checker.c bonus/execute_op.c
 
-PS_FILES = mandatory/sort_big.c mandatory/sort_small.c mandatory/sort_stack.c mandatory/sort_utils.c mandatory/sort_utils2.c mandatory/utils.c
+PS_FILES = mandatory/push_swap.c mandatory/sort_big.c mandatory/sort_small.c mandatory/sort_stack.c mandatory/sort_utils.c mandatory/sort_utils2.c mandatory/utils.c
 
 PS_OBJ = $(PS_FILES:.c=.o)
 CHECKER_OBJ = $(CHECKER_FILES:.c=.o)
@@ -49,7 +49,7 @@ $(PS_LIB) : $(LIBFT_OBJ) $(STACK_OBJ) $(PARSE_OBJ)
 	${AR} $@ $^
 
 $(NAME) : $(PS_LIB) $(PS_OBJ)
-	${CC} $^ mandatory/push_swap.c -o $@
+	${CC} $^ mandatory/main.c -o $@
 
 %.o : %.c $(HEADERS)
 	$(CC) -o $@ -c  $<
@@ -64,5 +64,7 @@ clean :
 
 fclean : clean
 	$(RM) $(PS_LIB) $(NAME) $(CNAME)
+
+re : fclean all
 
 .PHONY : clean fclean all bonus

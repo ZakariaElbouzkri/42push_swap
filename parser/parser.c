@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:51:06 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 02:47:20 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/17 11:15:46 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	check_args(char **args)
 	if (!triger)
 	{
 		free_args(args);
-		ft_puterror("Erorr.");
+		ft_puterror("ERROR: wrong args\n");
 	}
 }
 
@@ -35,7 +35,7 @@ t_stk	*parse_stack(char **av)
 
 	args = split_args(av);
 	if (!args)
-		ft_puterror("Erorr.");
+		ft_puterror("ERROR\n");
 	check_args(args);
 	stk = args_to_stk(args);
 	if (!stk)

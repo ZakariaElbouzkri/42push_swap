@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 21:31:17 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/17 00:28:22 by zel-bouz         ###   ########.fr       */
+/*   Created: 2023/02/17 00:22:03 by zel-bouz          #+#    #+#             */
+/*   Updated: 2023/02/17 01:25:12 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	init_vars(t_vars *vars)
+int	main(int ac, char **av)
 {
-	vars->a = NULL;
-	vars->b = NULL;
-	vars->a_max = 0;
-	vars->b_max = 0;
-	vars->a_min = 0;
-	vars->b_min = 0;
-	vars->a_len = 0;
-	vars->b_len = 0;
-	vars->b_len = 0;
-	vars->pivot = 0;
-	vars->shunks_nm = 0;
-	vars->fixe_len = 0;
-}
+	t_stk	*stk;
 
-void	push_swap(t_stk *a)
-{
-	t_vars	vars;
-
-	init_vars(&vars);
-	vars.a = a;
-	init_final_pos(vars.a);
-	sort_stack(&vars);
-	clear_stk(&vars.a);
+	if (ac >= 2)
+	{
+		stk = parse_stack(&av[1]);
+		if (!stk)
+			ft_puterror("ERROR\n");
+		push_swap(stk);
+	}
+	return (0);
 }

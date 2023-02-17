@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:10:38 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 02:47:05 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/17 11:13:53 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	str_is_digit(char *s)
 		return (0);
 	while (*s)
 	{
+		if (!ft_isdigit(*s) && (*s != '-' && *s != '+'))
+			return (0);
 		if (!ft_isdigit(*s))
 		{
 			if (*s == '+' && plus != 0)

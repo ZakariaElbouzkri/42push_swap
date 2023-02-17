@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:08:27 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/15 02:51:18 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/02/17 11:18:39 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ static void	free_alocated(char **res, int i)
 	int	j;
 
 	j = 0;
-	while (j < (i - 1))
+	while (j < i)
 	{
-		free(res[i]);
-		res[i++] = NULL;
+		free(res[j]);
+		res[j++] = NULL;
 	}
 	free(res);
 	res = NULL;
@@ -88,7 +88,7 @@ char	**split_args(char **arr)
 	while (arr[i])
 	{
 		if (!ft_strcmp(arr[i], ""))
-			return (free_alocated(res, i), NULL);
+			return (free_alocated(res, z), NULL);
 		spl = ft_split(arr[i], ' ');
 		if (!spl)
 			return (NULL);
