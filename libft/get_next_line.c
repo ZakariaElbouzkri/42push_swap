@@ -110,7 +110,7 @@ static char	*ft_read_from_file(int fd, char *saved)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*saved[OPEN_MAX];
+	static char	*saved[FOPEN_MAX];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
