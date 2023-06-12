@@ -29,7 +29,7 @@ void	checker(char **av)
 		vars.op = NULL;
 		vars.op = get_next_line(0);
 	}
-	if (!stack_sorted(vars.a) || vars.b > 0)
+	if (!stack_sorted(vars.a) || vars.size_b > 0)
 		ft_printf("KO\n");
 	else
 		ft_printf("OK\n");

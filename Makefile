@@ -56,22 +56,15 @@ P_OBJ = $(P_SRC:.c=.o)
 S_OBJ = $(S_SRC:.c=.o)
 LIB_OBJ = $(LIB_SRC:.c=.o)
 
-UTILS = utils.a
+all: $(NAME)
 
-
-all: $(UTILS) $(NAME)
-
-$(UTILS) : $(LIB_OBJ) $(S_OBJ) $(P_OBJ)
-	@$(AR) $@ $^
-	@echo $@ created
-
-$(NAME) : $(UTILS) $(OBJ)
+$(NAME) : $(OBJ) $(P_OBJ) $(S_OBJ) $(LIB_OBJ)
 	@$(CC) $^ -o $@
 	@echo $@ created
 
-bonus: $(UTILS) $(CNAME)
+bonus: $(CNAME)
 
-$(CNAME) : $(UTILS) $(B_OBJ)
+$(CNAME): $(B_OBJ) $(P_OBJ) $(S_OBJ) $(LIB_OBJ)
 	@$(CC) $^ -o $@
 	@echo $@ created
 
